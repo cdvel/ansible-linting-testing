@@ -1,0 +1,17 @@
+- hosts: localhost
+  gather_facts: false
+  connection: local
+
+
+  tasks:
+    # Synta check will pass whether or not this file exists.
+    - include_tasks: date.yml
+
+    # This wll cause a failure, since it can be checked statically.
+    # - import_tasks: free.yml
+
+    - name: Print a debug message.
+      debug:
+        msg: "Hello there."
+
+# ansible-playbook  syntax-check.yml --syntax-check

@@ -1,0 +1,17 @@
+---
+# tasks file for myrole
+- name: Install apache.
+  yum:
+    name: httpd
+    state: present
+  register: yum
+
+## use `molecule converge` + fail module as 'breakpoint'
+# - fail:
+
+# - debug: var=yum
+# - copy:
+#     src: file.conf
+#     dest: /etc/httpd/conf.d/welcome.conf
+## use `molecule login` to ssh into instance
+#

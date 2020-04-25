@@ -1,4 +1,4 @@
-## Testing Ansible playbooks (plus molecule)
+## Testing/Linting Ansible playbooks locally
 
 The testing spectrum from low to high complexity:
 
@@ -27,11 +27,11 @@ ansible-galaxy  install -r requirements.yml
 requirements.yml
 ```yaml
 ---
-roles:
-	- name: elliotweiser.osx-command-line-tools
-	  version: 2.3.0
-	- name: geerlingguy.homebrew
-	version: 3.1.0
+  roles:
+  - name: elliotweiser.osx-command-line-tools
+    version: 2.3.0
+  - name: geerlingguy.homebrew
+    version: 3.1.0
 ```
 
 ## References
